@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  postgres:
+    image: 'postgres:11.1'
+    container_name: 'book_store'
+    ports:
+      - 5432:5432
+    environment:
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_HOST_AUTH_METHOD=trust'
+      - 'POSTGRES_DB=bookshop'
